@@ -25,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
+        <div className="fixed inset-0 -z-10 h-screen w-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#204ff8_100%))]"></div>
         {children}
       </body>
     </html>
