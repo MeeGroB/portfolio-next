@@ -87,7 +87,7 @@ const ExperienceSection = () => {
                     </p>
                     <ul className="text-muted-foreground text-pretty ml-4">
                       {exp.description.map((desc,idx)=> (
-                        <li className="list-disc mb-1">
+                        <li className="list-disc mb-1" key={idx}>
                           {desc}
                         </li>
                       ))}
