@@ -31,8 +31,7 @@ const Navigation = () => {
   }, [])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-md border-b border-boder/50" : "bg-transparent"}`}>
-      <div className="container mx-auto px-4 py-4">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border/50" : "bg-transparent"}`}>      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between z-20">
           <Link href="/" className="text-3xl font-bold text-primary hover:text-primary/80 transition-colors">
             Pier Chávez
@@ -67,7 +66,7 @@ const Navigation = () => {
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div 
-              className="md:hidden mt-4 pb-4 space-y-3 border-t border-boder/50 pt-4 bg-background/90 backdrop-blur-md"
+              className="md:hidden mt-4 pb-4 space-y-3 border-t border-border/50 pt-4 bg-background/90 backdrop-blur-md"
               variants={slideDownMenu}
               initial="hidden"
               animate="visible"

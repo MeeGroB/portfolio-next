@@ -70,10 +70,9 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
               <div className="flex flex-col h-full">
                 <div className="flex gap-3 mb-4">
                   <div className="shrink-0">
-                    <div className="w-10 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
                       <edu.icon className="w-5 h-5 text-primary" />
-                    </div>
-                  </div>
+                    </div>                  </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-foreground mb-1 text-balance">
                       {edu.title}
