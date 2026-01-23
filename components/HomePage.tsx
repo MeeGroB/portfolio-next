@@ -10,11 +10,16 @@ import ProjectsSection from "./ProjectsSection"
 import ContactSection from "./ContactSection"
 import CertificateModal from "./CertificateModal"
 import { useState } from "react"
+import ProjectPreviewModal from "./ProjectPreviewModal"
 
 const HomePage = () => {
 
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null)
   const[selectedCertificate, setSelectedCertificate] = useState<{ title: string, image: string} | null>(null)
 
+  const handleViewDetails = (projectId: string) => {
+    setSelectedProjectId(null)
+  }
 
   return (
     <main className="min-h-screen relative">
@@ -23,8 +28,14 @@ const HomePage = () => {
         <AboutSection />
         <ExperienceSection />
         <EducationSection onCertificateClick={setSelectedCertificate} />
-        <ProjectsSection />
+        <ProjectsSection onProjectClick={setSelectedProjectId} />
         <ContactSection />
+
+        <ProjectPreviewModal 
+          projectId={selectedProjectId}
+          onClose={()=> setSelectedProjectId(null)}
+          onViewDetails={handleViewDetails}
+        />
 
         <CertificateModal certificate={selectedCertificate} onClose={()=> setSelectedCertificate(null)} />
     </main>
