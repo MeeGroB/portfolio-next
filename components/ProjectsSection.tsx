@@ -42,9 +42,8 @@ const ProjectsSection = ({ onProjectClick}: ProjectsSectionProps) => {
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 778px) 100vw, 50vw"
-                  />
-                </div>
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  />                </div>
 
                 <div className="p-6 space-y-4">
                   <h3 className="text-2xl font-bold text-foreground text-balance">{project.title}</h3>
@@ -72,10 +71,9 @@ const ProjectsSection = ({ onProjectClick}: ProjectsSectionProps) => {
                     <button className="flex-1 bg-primary hover:bg-primary/90 transition-colors rounded-md px-3 h-8 cursor-pointer" onClick={()=> onProjectClick(project.id)}>
                       Ver Detalles
                     </button>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex justify-center items-center whitespace-nowrap text-sm font-medium transition-all focus-visible:border-ring focus-visible:ring-ring/50 border shadow-xs hover:text-accent h-8 rounded-md gap-1.5 px-3 border-primary/50 hover:bg-primary/10">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Ver ${project.title} en vivo`} className="inline-flex justify-center items-center whitespace-nowrap text-sm font-medium transition-all focus-visible:border-ring focus-visible:ring-ring/50 border shadow-xs hover:text-accent h-8 rounded-md gap-1.5 px-3 border-primary/50 hover:bg-primary/10">
                       <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
+                    </a>                  </div>
                 </div>
               </div>
             </motion.div>

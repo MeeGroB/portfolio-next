@@ -20,7 +20,7 @@ const ProjectPreviewModal = ({ projectId, onClose, onViewDetails }: ProjectModal
   if (!project) return null
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -39,11 +39,11 @@ const ProjectPreviewModal = ({ projectId, onClose, onViewDetails }: ProjectModal
           <h3 className="text-2xl font-bold text-balance mb-2">{project.title}</h3>
           <button
             onClick={onClose}
+            aria-label="Cerrar modal"
             className="absolute top-4 right-4 z-10  rounded-full p-2 shadow-lg  transition-colors cursor-pointer text-muted-foreground"
           >
             <X size={24} />
           </button>
-
           <div className="relative w-full h-80">
             <Image
               src={project.image}
@@ -61,23 +61,22 @@ const ProjectPreviewModal = ({ projectId, onClose, onViewDetails }: ProjectModal
           </div>
 
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
-            <button
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 flex-1 cursor-pointer"
+            <Link
+              href={`/proyecto/${project.id}`}
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-4 py-2 flex-1"
             >
-              <Link
-                href={`/proyecto/${project.id}`}
-              >
-                Ver más detalles
-              </Link>
-            </button>
+              Ver más detalles
+            </Link>
 
-            <button className="flex-1">
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[>svg]:px-3 flex-1 bg-transparent w-full">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                Ver proyecto
-              </a>
-            </button>
-          </div>
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 flex-1 bg-transparent"
+            >
+              <ExternalLink className="mr-2 h-4 w-4" />
+              Ver proyecto
+            </a>          </div>
 
         </motion.div>
       </motion.div>
