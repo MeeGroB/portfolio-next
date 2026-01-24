@@ -19,21 +19,21 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-7xl font-bold text-foreground text-balance"
+            className="text-5xl md:text-7xl font-bold bg-linear-to-r from-accent to-primary bg-clip-text text-transparent text-balance"
           >
-            Pier Chávez
+            Desarrollador Web
           </motion.h1>
 
           <motion.h2
             variants={fadeInUp}
-            className="text-2xl md:text-4xl font-semibold text-primary text-balance"
+            className="text-5xl md:text-7xl font-bold text-balance bg-linear-to-r from-accent to-primary bg-clip-text text-transparent"
           >
-            Desarrollador Fullstack
+            Fullstack
           </motion.h2>
 
           <motion.p
             variants={fadeInUp}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty"
+            className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto text-pretty"
           >
             Creando soluciones innovadoras con código limpio y eficiente
           </motion.p>
@@ -42,12 +42,12 @@ const HeroSection = () => {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8"
           >
-              <a href="#proyectos" className="inline-flex items-center justify-center gap-2 font-medium transition-all outline-none h-10 rounded-md px-6 min-w-45 bg-primary hover:bg-primary/90 text-primary-foreground text-sm">
+              <a href="#proyectos" className="inline-flex items-center justify-center gap-2 font-medium transition-all outline-none h-10 rounded-md px-6 min-w-45 bg-primary hover:bg-primary/90 text-primary-foreground text-md">
                 Ver Proyectos
                 <ArrowDown className="ml-2 h-5 w-5" />
               </a>
 
-              <a href="/CV Pier Chávez.pdf" className="inline-flex items-center justify-center gap-2 font-medium transition-all outline-none h-10 rounded-md px-6 min-w-45 bg-primary-foreground hover:bg-primary-foreground/90 text-primary text-sm" download={true}>
+              <a href="/CV Pier Chávez.pdf" className="inline-flex items-center justify-center gap-2 font-medium transition-all outline-none h-10 rounded-md px-6 min-w-45 bg-primary-foreground hover:bg-primary-foreground/90 text-primary text-md" download={true}>
                 <Download className="mr-2 h-5 w-5" />
                 Descargar CV
               </a>
