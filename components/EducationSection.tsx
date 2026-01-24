@@ -20,7 +20,7 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
       icon: GraduationCap,
       institution: "Universidad Tecnológica del Perú",
       period: "2010 - 2015",
-      certificateImage: "/certificates/bachiller.jpg"
+      certificateImage: "/certificates/bachiller.webp"
     },
 
     {
@@ -28,7 +28,7 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
       icon: Award,
       institution: "Udemy",
       period: "2025",
-      certificateImage: "/certificates/javascript_udemy.jpg"
+      certificateImage: "/certificates/javascript_udemy.webp"
     },
 
     {
@@ -36,7 +36,7 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
       icon: Award,
       institution: "Udemy",
       period: "2024",
-      certificateImage: "/certificates/css_udemy.jpg"
+      certificateImage: "/certificates/css_udemy.webp"
     },
 
     {
@@ -44,7 +44,7 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
       icon: Award,
       institution: "Código Facilito",
       period: "2021",
-      certificateImage: "/certificates/desarrollo_web_CF.jpg"
+      certificateImage: "/certificates/desarrollo_web_CF.webp"
     },
   ]
 

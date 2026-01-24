@@ -47,6 +47,7 @@ const CertificateModal = ({ certificate, onClose }: certificateModalProps) => {
                   alt={certificate.title}
                   fill
                   className="object-contain"
+                  priority
                 />
               </div>
             </div>
