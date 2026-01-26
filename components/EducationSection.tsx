@@ -81,7 +81,7 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
                       {edu.institution}
                     </p>
 
-                    <p className="text-md">
+                    <p className="text-base">
                       {edu.period}
                     </p>
                   </div>

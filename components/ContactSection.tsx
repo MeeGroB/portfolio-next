@@ -13,13 +13,17 @@ const ContactSection = () => {
 
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
-  const copyEmail = ()=> {
-    navigator.clipboard.writeText("pier.cmont@gmail.com")
-    setEmailCopied(true)
-    console.log("Copiado")
-    setTimeout(() => {
-      setEmailCopied(false)
-    }, 2000);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("pier.cmont@gmail.com")
+      setEmailCopied(true)
+      setTimeout(() => {
+        setEmailCopied(false)
+      }, 2000);
+    } catch (error) {
+      console.error("Falló copiar email: ", error)
+    }
+
   }
 
   return (
@@ -71,7 +75,7 @@ const ContactSection = () => {
                     </a>
                   </div>
 
-                  <div className="border p-2 rounded-md cursor-pointer bg-muted-foreground/20 hover:bg-primary transition-colors duration-300 text-primary hover:text-background relative" onClick={copyEmail}>
+                  <button className="border p-2 rounded-md cursor-pointer bg-muted-foreground/20 hover:bg-primary transition-colors duration-300 text-primary hover:text-background relative" onClick={copyEmail}>
 
                     {!emailCopied ? (
                       <Copy className="h-5 w-5" />
@@ -84,27 +88,29 @@ const ContactSection = () => {
                         ✓ Copiado
                       </span>
                     )}
-                  </div>
+                  </button>
                 </div>
 
                 <div className="flex gap-8 items-center justify-center mt-2">
-                  
-                  <a 
+
+                  <a
                     href="https://github.com/MeeGroB"
                     className="p-2 border rounded-md bg-muted-foreground/30 hover:bg-muted-foreground/60 text-primary transition-colors duration-300 hover:text-background"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Perfil de Github"
                   >
 
                     <Github className="h-8 w-8" />
                   </a>
 
 
-                  <a 
+                  <a
                     href="https://www.linkedin.com/in/piercmont/"
                     className="p-2 border rounded-md bg-muted-foreground/30 hover:bg-muted-foreground/60 text-primary transition-colors duration-300 hover:text-background"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Perfil de LinkedIn "
                   >
 
                     <Linkedin className="h-8 w-8" />

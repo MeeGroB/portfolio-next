@@ -39,8 +39,13 @@ const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
             </a>
 
             {project.githubUrl && (
-              <a>
-                <Github />
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-2 items-center justify-center hover:text-accent-foreground border bg-background py-1.5 rounded-md px-3 hover:bg-accent transition-colors duration-300"
+              >
+                <Github className="mr-2 h-4 w-4"/>
                 Github
               </a>
             )}
