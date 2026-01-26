@@ -11,6 +11,7 @@ import ContactSection from "./ContactSection"
 import CertificateModal from "./CertificateModal"
 import { useState } from "react"
 import ProjectPreviewModal from "./ProjectPreviewModal"
+import Footer from "./Footer"
 
 const HomePage = () => {
 
@@ -38,6 +39,9 @@ const HomePage = () => {
         />
 
         <CertificateModal certificate={selectedCertificate} onClose={()=> setSelectedCertificate(null)} />
+
+
+        <Footer />
     </main>
   )
 }

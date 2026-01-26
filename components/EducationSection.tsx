@@ -74,10 +74,14 @@ const EducationSection = ({ onCertificateClick} : EducationSectionProps) => {
                       <edu.icon className="w-5 h-5 text-primary" />
                     </div>                  </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground mb-1 text-balance">
+                    <h3 className="text-xl font-semibold text-foreground mb-1 text-balance">
                       {edu.title}
                     </h3>
-                    <p className="text-primary font-medium text-sm">
+                    <p className="text-primary font-medium text-lg">
+                      {edu.institution}
+                    </p>
+
+                    <p className="text-md">
                       {edu.period}
                     </p>
                   </div>
