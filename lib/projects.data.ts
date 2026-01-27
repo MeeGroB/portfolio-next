@@ -87,12 +87,11 @@ export const projects: Project[] = [
       "Implementar elementos interactivos ligeros y optimizar assets para buena experiencia en dispositivos móviles. Implementar tres idiomas en la web.",
   },
 
-  // Mantengo GAPEL como pediste
   {
     id: "gapel",
     title: "GAPEL S.A.C.",
     description:
-      "Desarrollo completo de la página web corporativa para GAPEL S.A.C., empresa especializada en gestión de bases de datos. Incluye portafolio de servicios, casos de éxito y formulario de contacto.",
+      "Desarrollo completo de la página web corporativa para GAPEL S.A.C., empresa especializada en gestión de pérdidas de energía. Incluye portafolio de servicios, casos de éxito y formulario de contacto.",
     shortDescription: "Diseño y desarrollo de la página web",
     image: "/projects/gapel.webp",
     technologies: [
