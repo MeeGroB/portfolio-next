@@ -201,6 +201,7 @@ const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 transition-colors duration-300 cursor-pointer rounded-md px-3 py-2"
                 >
                   <ExternalLink className="mr-2 h-5 w-5" />
                   Ver proyecto en vivo
@@ -211,6 +212,7 @@ const ProjectDetailClient = ({ project }: ProjectDetailClientProps) => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 transition-colors duration-300 cursor-pointer rounded-md px-3 py-2"
                   >
                     <Github className="mr-2 h-5 w-5" />
                     Ver en Github
